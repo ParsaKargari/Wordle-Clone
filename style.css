@@ -1,0 +1,272 @@
+body {
+  transition: background-color 0.3s ease-in-out;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#top-header {
+  display: flex;
+  background-color: inherit;
+  border-bottom: 1px solid rgb(201, 199, 199);
+  height: 9vh;
+  justify-content: center;
+}
+
+#left-header {
+  flex: 1 0 25%;
+}
+#right-header {
+  display: flex;
+  flex: 1 0 25%;
+  justify-content: center;
+  align-items: center;
+}
+#wordle-title {
+  display: flex;
+  background: inherit;
+  flex: 1 0 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+#dark-button, #question-button, #info-button {
+  transition: background-color 0.2s ease-in-out;
+  background-color: inherit;
+  height: 100%;
+  width: 33%;
+  border: none;
+  border-radius: 0px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+#dark-button:hover, #question-button:hover, #info-button:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+#dark-button:active, #question-button:active, #info-button:active {
+  background-color: rgb(235, 234, 234);
+} 
+
+#main-content-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+#main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 49.9%;
+}
+
+#right-sidebar{
+  display: none;
+  flex-direction: column;
+  border-left: 1px solid rgb(201, 199, 199);
+  flex: 1 0 50%;
+}
+
+#instruction-main-content{
+  margin-left: 3%;
+  margin-top: 3%;
+  height: 50%;
+}
+
+.list-instructions{
+  line-height: 35px;
+  list-style-type: circle;
+}
+
+#grid-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 50%;
+}
+
+#grids {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+#congratulations-gif{
+  display: none;
+}
+
+.game-cell {
+  margin: 0.5px;
+  width: 70px;
+  height: 70px;
+  border: 1px solid rgb(201, 199, 199);
+  box-sizing: border-box;
+  color: black;
+  text-transform: uppercase;
+  display: grid;
+  place-items: center;
+  font-size: 2.1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.game-cell.highlight {
+  border-color: rgb(95, 95, 95);
+}
+
+.game-cell.empty {
+  background-color: rgb(58,58,60);
+  color: white;
+}
+
+.game-cell.wrong {
+  background-color: rgb(181,159,59);
+  color: white;
+}
+
+.game-cell.right {
+  background-color: rgb(83,141,78);
+  color: white;
+}
+
+#start-over-button{
+  display: flex;
+  justify-content: center;
+  flex: 1 0 35%;
+}
+
+#start-over-button button {
+  height: 30px;
+  width: 100px;
+  background-color: rgb(129, 168, 107);
+  border: none;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#start-over-button button:hover {
+  transition: background-color 0.2s ease-in-out;
+  background-color: rgb(129, 168, 107, 0.8);
+  border: 1px solid rgb(29, 92, 0);
+}
+
+#hint-bar{
+  display: none;
+  place-items: none;
+  background-color: inherit;
+  height: 5vh;
+  border-top: 1px solid inherit;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#win-box{
+  display: none;
+  place-items: center;
+  background-color: rgb(237, 239, 240);
+  height: 6vh;
+  min-height: 5vh;
+  border-top: 1px solid rgb(201, 199, 199);
+  transition: background-color 0.3s ease-in-out;
+}
+
+#lose-box{
+  display: none;
+  place-items: center;
+  background-color: rgb(170, 52, 48);
+  height: 6vh;
+  min-height: 5vh;
+  border-top: 1px solid rgb(201, 199, 199);
+  transition: background-color 0.3s ease-in-out;
+  color: white;
+}
+
+.question-css #hint-bar{
+  display: grid;
+  color: black;
+  place-items: center;
+  background-color: rgb(247, 240, 232);
+  height: 5vh;
+  border-top: 1px solid rgb(201, 199, 199);
+}
+
+.dark-mode {
+  background-color: rgb(36, 35, 35);
+  color: white;
+}
+
+.dark-mode #dark-button, .dark-mode #question-button, .dark-mode #info-button {
+  color: white;
+}
+
+.dark-mode #dark-button:hover, .dark-mode #question-button:hover, .dark-mode #info-button:hover {
+  background-color: rgb(59, 59, 59);
+}
+
+.dark-mode #dark-button:active, .dark-mode #question-button:active, .dark-mode #info-button:active {
+  background-color: rgb(49, 49, 49);
+}
+
+.dark-mode .game-cell {
+  color: white;
+}
+
+.dark-mode #win-box{
+  background-color: rgb(36, 35, 35);
+}
+
+.dark-mode #hint-bar{
+  background-color: rgb(194, 194, 129);
+  color: black;
+}
+
+.dark-mode .game-cell.highlight {
+  border-color: rgb(151, 148, 107);
+  background-color: rgb(58, 57, 57);
+}
+
+.how-to-play #right-sidebar {
+  display: flex;
+}
+
+.loser-page #lose-box{
+  display: grid;
+}
+
+.winner-page #congratulations-gif{
+  display: flex;
+}
+
+.winner-page #grids{
+  display: none;
+  
+}
+
+.winner-page #start-over-button{
+  flex: 1 0 30%;
+}
+
+.winner-page #win-box{
+  display: grid;
+}
+
+
+
+  
+
+
+footer {
+  display: flex;
+  border-top: 1px solid rgb(201, 199, 199);
+  height: 5vh;
+  background-color: inherit;
+  justify-content: center;
+  align-items: center;
+  
+}

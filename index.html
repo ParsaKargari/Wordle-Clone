@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Wordle</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div id = "container">
+
+      <header id="top-header">
+        <div id="left-header"></div>
+        <div id="wordle-title"><h1>Wordle</h1></div>
+        <div id="right-header">
+          <button id="dark-button">&#9681;</button> 
+          <button id="question-button">&#63;</button> 
+          <button id="info-button">&#9432;</button> 
+        </div>
+      </header>
+
+      <div id="main-content-container">
+        <aside id="left-sidebar"></aside>
+
+        <div id="main-content">
+          <div id="grid-container">
+
+            <div id="congratulations-gif">
+              <img src="https://res.cloudinary.com/mkf/image/upload/v1675467141/ENSF-381/labs/congrats_fkscna.gif" alt="CONGRATS">
+            </div>
+
+            <div id="grids">
+              <div class="game-cell" id="box00"></div>
+              <div class="game-cell" id="box01"></div>
+              <div class="game-cell" id="box02"></div>
+              <div class="game-cell" id="box03"></div>
+              <div class="game-cell" id="box10"></div>
+              <div class="game-cell" id="box11"></div>
+              <div class="game-cell" id="box12"></div>
+              <div class="game-cell" id="box13"></div>
+              <div class="game-cell" id="box20"></div>
+              <div class="game-cell" id="box21"></div>
+              <div class="game-cell" id="box22"></div>
+              <div class="game-cell" id="box23"></div>
+              <div class="game-cell" id="box30"></div>
+              <div class="game-cell" id="box31"></div>
+              <div class="game-cell" id="box32"></div>
+              <div class="game-cell" id="box33"></div>              
+            </div>
+          </div>
+          <div id="start-over-button">
+            <button id="start-over-button-click"> </button>
+          </div>
+          
+          <div id="hint-bar">
+            
+          </div>
+
+          <div id="win-box">
+            
+          </div>
+
+          <div id="lose-box">
+            
+          </div>
+
+        </div>
+
+        <aside id="right-sidebar">
+          <div id="instruction-main-content">
+            <h3>How to play</h3>
+            <ul class="list-instructions">
+              <li>Start typing. The letters will appear in the boxes</li>
+              <li>Remove letters with Backspace</li>
+              <li>Hit Enter/Return to submit an answer</li>
+              <li>Letters with green background are in the right spot</li>
+              <li>Letters with yellow background exist in the word, but are in the wrong spot</li>
+              <li>Letters wbackground do not exist in the word</li>
+              <li>If you need a hint, click the <strong>?</strong> icon</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+      
+      
+      
+      
+      <footer>
+        <span>&copy; Parsa Kargari</span>
+      </footer>
+    
+    </div>
+    
+    <script src="./wordle.js"></script>
+  </body>
+
+</html>
